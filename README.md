@@ -1,3 +1,3 @@
 # Estudos
 
-## Projeto utilizado para experimentos em Java
+Projeto utilizado para experimentos em Java
