@@ -2,6 +2,8 @@ package com.estudos.reflection.construtores;
 
 import java.lang.reflect.Constructor;
 
+import com.sun.javafx.collections.MappingChange.Map;
+
 /**
  * 
  * Chamada de construtores que possuam parametros devem sempre ser com os
@@ -27,6 +29,7 @@ public class AcharConstrutor {
 		for (Constructor<?> constr : clazz.getConstructors()) {
 			Class<?>[] parameterTypes = constr.getParameterTypes();
 			if (parameterTypes.length == objects.length) {
+				
 				boolean erro = false;
 				for (int i = 0; i < objects.length && !erro; i++) {
 					if (!parameterTypes[i].isInstance(objects[i])) {
