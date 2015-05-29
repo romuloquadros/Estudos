@@ -25,7 +25,7 @@ public class LoggerProxy implements InvocationHandler {
 		return invoke;
 	}
 
-	public static Object criarProxy(Object obj) {
+	public static Object createProxy(Object obj) {
 		return Proxy.newProxyInstance(obj.getClass().getClassLoader(), obj.getClass().getInterfaces(), new LoggerProxy(obj));
 	}
 
